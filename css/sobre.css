@@ -1,0 +1,97 @@
+body {
+    color: #333333;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+p::first-letter {
+    font-weight: bold;
+}
+
+:not(p) + p::first-line {
+    font-variant: small-caps;
+}
+
+h1 + p {
+    text-indent: 0;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 940px;
+}
+
+h1 {
+    background-image: url(../img/sobre-background.jpg);
+    padding: 10px;
+}
+
+h2 {
+    border-bottom: 2px solid #333333;
+    margin-top: 30px;
+}
+
+figure {
+    background-color: #f2eded;
+    border: 1px dotted #ccc;
+    text-align: center;
+    padding: 15px;
+    margin: 30px;
+}
+
+figcaption {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+p {
+    padding: 0 45px;
+    text-indent: 15px;
+}
+
+  #centro-distribuicao {
+      margin-left: auto;
+      margin-right: auto;
+      width: 69%;
+}
+
+  #familia-pelho {
+      float: right;
+      margin: 0 0 10px 10px;
+}
+
+.diferenciais {
+    text-align: left;
+}
+
+@media (min-width: 480px) {
+    .article {
+        margin: 5px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 939px) {
+    #logo {
+        display: block;
+        margin: auto;
+    }
+
+    .container {
+        width: 100%;
+    }
+    .container h1 {
+        text-align: center;
+    }
+    figure {
+        width: 100%;
+        padding: 10px;
+    }
+    #centro-distribuicao {
+        width: 100%;
+    }
+
+    #centro-distribuicao img {
+        width: 90%;
+    }
+}
