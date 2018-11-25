@@ -4,6 +4,27 @@
     border-top: 2px solid #ccc;
 }
 
+.form-control:invalid {
+    border: 1px solid #cc0000;
+}
+
+body {
+    padding-top: 55px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.submit {
+    display: block;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    border: none;
+    color: #333;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    box-shadow: 0 1px 3px #777;
+    font-family: 'Open Sans', sans-serif;
+}
+
 .cores label::after {
     content: '';
     display: block;
@@ -78,12 +99,14 @@ label[for=rosa]::after {
 .produto h1 {
     font-size: 1.8em;
     font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .produto p {
     font-size: 1.2em;
     font-style: italic;
     margin-bottom: 1em;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .comprar {
@@ -93,6 +116,7 @@ label[for=rosa]::after {
 
     font-size: 1.4em;
     text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
 
     box-shadow: 0 1px 3px #777;
 
@@ -146,6 +170,7 @@ label[for=rosa]::after {
 .detalhes h2 {
     font-size: 1.5em;
     line-height: 2;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .detalhes p {
@@ -153,6 +178,7 @@ label[for=rosa]::after {
     font-size: 1em;
     line-height: 1.5;
     max-width: 36em;
+    font-family: 'PT Sans', sans-serif;
 }
 
 @media (min-width: 500px) {
@@ -184,4 +210,18 @@ tr:nth-child(2n) {
 
 td:first-child {
     font-style: italic;
+}
+
+.tamanhos output {
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+    
+    line-height: 44px;
+    text-align: center;
+    
+    border: 3px solid #666;
+    border-radius: 50%;
+    color: #555;
+    font-family: 'Open Sans', sans-serif;
 }

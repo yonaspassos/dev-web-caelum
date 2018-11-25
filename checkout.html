@@ -4,54 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/open-iconic-master/font/css/open-iconic-bootstrap.css">
+    <link rel="stylesheet" href="css/produtos.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Checkout Mirror Fashion</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <button class="navbar-toggler" type="button"
+            data-toggle="collapse" data-target="#navbarToggleExternalContent">
+            <span class="navbar-toggler-icon"></span>
+        </button> 
+        <a class="navbar-brand" href="index.html">Mirror Fashion</a>
+        <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+            <ul class="navbar-nav">
+                <li class="navbar-item active">
+                    <a class="navbar-link" href="sobre.html">Sobre</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="#">Ajuda</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="#">Perguntas Frequentes</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="#">Entre em contato</a>
+                </li>            
+            </ul>
+        </div>
+    </nav>
     <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1>Ótima escolha!</h1>
+        <div class="container">   
+                    
+            <h1>Ótima escolha!</h1>            
             <p>Obrigado por comprar na Mirror Fashion!
             Preencha seus dados para efetivar a compra.</p>
-
-            <h2>Sua compra: </h2>
-            <dl>
-                <dt>Produto</dt>
-                <dd>Fuzzy Cardigan</dd>
-
-                <dt>Cor</dt>
-                <dd>Verde</dd>
-
-                <dl>Tamanho</dl>
-                <dd>40</dd>
-
-                <dl>Preço</dl>
-                <dd>R$ 129,90</dd>
-            </dl>
+             
         </div>
-    </div>
+    </div> 
     <div class="container">
-        <div class="card mb-3">
-            <div class="card-header">
-                Sua compra:
-            </div>
-            <img src="img/produtos/foto1-verde.png" alt="Fuzzy Cardigan verde"
-                     class="img-thumbnail mb-3">
-            <div class="card-body">
-                <dl>
+        <div class="row">
+            <div class="col-md-4 col-xl-3">
+                <div class="card mb-3">
+                    <div class="card-head" style="font-weight: bold; font-size: 20px;">                
+                        <span class="glyphicon glyphicon-ok"></span>
+                        Sua compra
+                    </div>
+                <!-- <div class="d-none d-sm-block">  conferir essa div--> 
+                    <img 
+                        src="img/produtos/foto1-verde.png"
+                        alt="Fuzzy Cardigan verde"
+                        class="img-thumbnail mb-3"
+                    >
+                <!-- </div> -->
+                <div class="card-body">
+                    <dl>
                         <dt>Produto</dt>
                         <dd>Fuzzy Cardigan</dd>
         
                         <dt>Cor</dt>
                         <dd>Verde</dd>
         
-                        <dl>Tamanho</dl>
+                        <dt>Tamanho</dt>
                         <dd>40</dd>
         
-                        <dl>Preço</dl>
-                        <dd>R$ 129,90</dd>
+                        <dt>Preço</dt>
+                        <dd id="preco">R$ 129,90</dd>
                     </dl>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="qtd">Quantidade:</label>
+                            <input type="qtd" id="qtd" min="1" max="99" value="1" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="total">Total:</label>
+                            <output for="qtd preco" id="total" class="form-control">129,90
+                            </output>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <form class="col-md-8 col-xl-9">
+                <div class="row">
+                    <fieldset class="col-lg-6">
+                        <legend>Dados pessoais</legend>
+                        <div class="form-group">
+                            <span class="oi oi-person"></span>
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" class="form-control" id="nome" name="nome" autofocus required>
+                        </div>
+                        <div class="form-group">
+                            <span class="oi oi-envelope-closed"></span>
+                            <label for="email">E-mail</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">    
+                                    <span class="input-group-text">@</span>                    
+                                </div>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="exemplo@exemplo.com.br" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cpf">CPF</label>
+                            <input type="text" class="form-control" id="cpf" name="cpf"
+                            placeholder="000.000.000-00" data-mask="999.999.999-99" required>
+                        </div>
+                        <div class="form-group custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" 
+                            id="newlsetter" value="sim" checked>
+                            <label class="custom-control-label" for="newsletter">
+                                Quero receber Newsletter da Mirror Fashion!
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="col-lg-6">                
+                        <legend>Cartão de crédito</legend>
+                        <div class="form-group">
+                                <span class="glyphicon glyphicon-credit-card"></span>
+                                <label for="numero-cartão">Cartão - CVV </label>
+                                <input type="text" class="form-control" id="numero-cartao"
+                                name="numero-cartao" data-mask="9999 9999 9999 9999 - 999">
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <div class="input-group-pretend">
+                                    <label class="input-group-text" for="bandeira-cartao">Bandeira</label>
+                                </div>
+                                <select class="custom-select" id="bandeira-cartão">
+                                    <option disabled selected>Selecione uma opção...</option>
+                                    <option value="master">MasterCard</option>
+                                    <option value="visa">Visa</option>
+                                    <option value="amex">American Express</option>
+                                </select>
+                            </div>    
+                        </div>
+                        <div class="form-group">                 
+                            <label for="validade-cartao">Validade do cartão</label>
+                            <input type="month" class="form-control" id="validade-cartao" name="validade-cartao">
+                            
+                        </div>                
+                    </fieldset>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <span class="oi oi-thumb-up"></span>Confirmar pedido</button>
+            </form>
             </div>
         </div>
     </div>
+    <footer>
+        <div class="container">
+            <img src="img/logo-rodape.png" alt="Logo Mirror Fashion">
+            <ul class="social">
+                <li><a href="http://facebook.com/mirrorfashion">Facebook</a></li>
+                <li><a href="http://twitter.com/mirrorfashion">Twitter</a></li>
+                <li><a href="http://plus.google.com/mirrorfashion">Google+</a></li>
+            </ul>
+
+        </div>                    
+    </footer>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/total.js"></script>
+    <script type="text/javascript" src="js/inputmask-plugin.js"></script>
 </body>
 </html>
